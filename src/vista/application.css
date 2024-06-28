@@ -1,0 +1,30 @@
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 3 0 3 0;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #f3d93c;
+    -fx-text-inner-color: #f3d93c;
+    -fx-prompt-text-fill: rgba(243, 217, 60, 0.2);
+}
+
+
+.button {
+    -fx-background-color: #f3d93c; 
+    -fx-text-fill: black; 
+    -fx-font-weight: bold; 
+}
+
+
+.button:hover {
+    -fx-background-color: darkorange; 
+    -fx-text-fill: black; 
+}
+
+.rectangle {
+    -fx-fill: #f3d93c;        
+    -fx-stroke: black;       
+    -fx-stroke-width: 2;      
+}

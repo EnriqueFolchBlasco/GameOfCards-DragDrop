@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="999.0" prefWidth="1485.0" style="-fx-background-color: #181f29;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BaseplateController">
+   <children>
+      <Pane fx:id="panel_login" layoutX="1.0" layoutY="133.0" prefHeight="857.0" prefWidth="1474.0">
+         <children>
+            <ImageView fitHeight="230.0" fitWidth="398.0" layoutX="14.0" layoutY="613.0" pickOnBounds="true">
+               <image>
+                  <Image url="@log.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="467.0" fitWidth="647.0" layoutX="402.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@login1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="162.0" fitWidth="134.0" layoutX="679.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@punts.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="230.0" fitWidth="398.0" layoutX="1239.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@qrcode.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="login_user" layoutX="646.0" layoutY="285.0" prefHeight="25.0" prefWidth="159.0" promptText="Usuario" stylesheets="@application.css" />
+            <PasswordField fx:id="login_password" layoutX="646.0" layoutY="332.0" prefWidth="159.0" promptText="Contraseña" stylesheets="@application.css" />
+            <Button fx:id="access_button" layoutX="646.0" layoutY="381.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Acceder" />
+            <Button fx:id="registrar_button" layoutX="646.0" layoutY="419.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Registrarse" />
+            <Text fill="#f3d93c" layoutX="789.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" wrappingWidth="187.0000000000001">
+               <font>
+                  <Font name="Lato Black" size="53.0" />
+               </font>
+            </Text>
+            <Label fx:id="entrada_error" alignment="CENTER" contentDisplay="CENTER" layoutX="624.0" layoutY="455.0" prefHeight="25.0" prefWidth="206.0" text="Label" textAlignment="CENTER" textFill="#eb0707" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Text fill="#f3d93c" layoutX="703.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright (C) 2525 - The Cards Game" wrappingWidth="254.99999999999994">
+               <font>
+                  <Font name="Lato Black Italic" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="#f3d93c" layoutX="1252.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GUIA SPECIAL EDITION" wrappingWidth="206.0000000000001">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="panel_registrarse" layoutX="294.0" layoutY="133.0" prefHeight="415.0" prefWidth="924.0" visible="false" AnchorPane.leftAnchor="294.0">
+         <children>
+            <ImageView fitHeight="361.0" fitWidth="283.0" layoutX="322.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@registro1.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f3d93c" layoutX="411.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREAR USUARIO" textAlignment="CENTER" wrappingWidth="118.99999999999989">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="registrar_user" layoutX="385.0" layoutY="230.0" prefHeight="25.0" prefWidth="159.0" promptText="Usuario" />
+            <Button fx:id="guardar_button" layoutX="386.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Guardar" />
+            <PasswordField fx:id="registrar_password" layoutX="386.0" layoutY="268.0" prefHeight="25.0" prefWidth="159.0" promptText="Contraseña nueva" />
+            <Label fx:id="error_label_yaexiste" layoutX="424.0" layoutY="373.0" prefHeight="25.0" prefWidth="80.0" text="YA EXISTE" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="error_label" layoutX="385.0" layoutY="342.0" prefHeight="32.0" prefWidth="159.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="atras_crearUsuario" layoutX="652.0" layoutY="29.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="58.0" text="Atras" />
+         </children>
+      </Pane>
+      <Pane fx:id="panel_gameplay" layoutX="22.0" layoutY="19.0" prefHeight="845.0" prefWidth="1450.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbdbdb" height="141.0" layoutX="217.0" layoutY="820.0" rotate="180.0" stroke="WHITE" strokeType="INSIDE" width="1029.0" />
+            <ImageView fitHeight="974.0" fitWidth="1474.0" layoutX="-17.0" opacity="0.12" pickOnBounds="true">
+               <image>
+                  <Image url="@elgif2.gif" />
+               </image>
+            </ImageView>
+            <Pane layoutX="109.0" layoutY="46.0" prefHeight="928.0" prefWidth="1274.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dce0e4" height="740.0" layoutX="193.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="225.0" />
+                  <Line endX="217.0" endY="6.0" layoutX="200.0" layoutY="384.0" startX="-7.0" startY="6.0" />
+                  <Circle fx:id="zone1_circle" fill="#d3c5c5" layoutX="301.0" layoutY="387.0" radius="71.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dce0e4" height="740.0" layoutX="549.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="225.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dce0e4" height="740.0" layoutX="900.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="225.0" />
+                  <Line endX="217.0" endY="6.0" layoutX="556.0" layoutY="384.0" startX="-7.0" startY="6.0" />
+                  <Circle fill="#d3c5c5" layoutX="657.0" layoutY="387.0" radius="71.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Line endX="217.0" endY="6.0" layoutX="907.0" layoutY="384.0" startX="-7.0" startY="6.0" />
+                  <Circle fill="#d3c5c5" layoutX="1008.0" layoutY="387.0" radius="71.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Pane layoutX="198.0" layoutY="463.0" prefHeight="286.0" prefWidth="217.0" stylesheets="@application.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="553.0" layoutY="471.0" prefHeight="286.0" prefWidth="217.0" stylesheets="@application.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="904.0" layoutY="463.0" prefHeight="286.0" prefWidth="217.0" stylesheets="@application.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="200.0" layoutY="14.0" prefHeight="286.0" prefWidth="217.0" stylesheets="@application.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="555.0" layoutY="22.0" prefHeight="286.0" prefWidth="217.0" stylesheets="@application.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="906.0" layoutY="14.0" prefHeight="286.0" prefWidth="217.0" stylesheets="@application.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="110.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="128.0" layoutX="14.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #f3d93c;" width="88.0" />
+                     </children>
+                  </Pane>
+                  <Circle layoutX="198.0" layoutY="342.0" radius="34.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.826084315776825" green="0.84590744972229" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle layoutX="198.0" layoutY="437.0" radius="34.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.826084315776825" green="0.84590744972229" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle layoutX="549.0" layoutY="343.0" radius="34.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.826084315776825" green="0.84590744972229" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle layoutX="549.0" layoutY="438.0" radius="34.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.826084315776825" green="0.84590744972229" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle layoutX="900.0" layoutY="340.0" radius="34.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.826084315776825" green="0.84590744972229" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle layoutX="900.0" layoutY="435.0" radius="34.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.826084315776825" green="0.84590744972229" blue="0.9342105388641357" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Label fx:id="zone1_enemy_counter" layoutX="184.0" layoutY="318.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="zone1_player_counter" layoutX="184.0" layoutY="414.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="zone2_enemy_counter" layoutX="536.0" layoutY="318.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="zone2_player_counter" layoutX="536.0" layoutY="414.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="zone3_enemy_counter" layoutX="886.0" layoutY="316.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="zone3_player_counter" layoutX="887.0" layoutY="412.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="siguienteRonda_button" alignment="CENTER" contentDisplay="CENTER" layoutY="681.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="100.0" text="SIGUIENTE RONDA" wrapText="true" />
+                  <Circle layoutX="1210.0" layoutY="786.0" radius="50.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1136000007390976" green="0.21583999693393707" blue="0.7099999785423279" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Label fx:id="player_stamina" layoutX="1199.0" layoutY="759.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Circle layoutX="1199.0" layoutY="32.0" radius="50.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <RadialGradient centerX="0.5165745856353592" centerY="0.5" focusAngle="-5.19" radius="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.1136000007390976" green="0.21583999693393707" blue="0.7099999785423279" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Label fx:id="enemie_stamina" layoutX="1188.0" layoutY="5.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="141.0" fitWidth="142.0" layoutX="338.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@zoneGif.gif" />
+               </image></ImageView>
+            <ImageView fitHeight="141.0" fitWidth="142.0" layoutX="693.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@zoneGif.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="141.0" fitWidth="142.0" layoutX="1046.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@zoneGif.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="panel_menu" layoutX="63.0" layoutY="47.0" prefHeight="919.0" prefWidth="1368.0" visible="false">
+         <children>
+            <Label fx:id="label_shop2_name" alignment="CENTER" contentDisplay="TOP" layoutX="1131.0" layoutY="713.0" prefHeight="16.0" prefWidth="153.0" text="Label" textFill="#f3d93c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_shop1_name" alignment="CENTER" contentDisplay="TOP" layoutX="840.0" layoutY="708.0" prefHeight="32.0" prefWidth="153.0" text="Label" textFill="#f3d93c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_shop2" alignment="CENTER" contentDisplay="TOP" layoutX="1163.0" layoutY="731.0" prefHeight="47.0" prefWidth="100.0" text="Label" textFill="#f3d93c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_shop1" alignment="CENTER" contentDisplay="TOP" layoutX="876.0" layoutY="731.0" prefHeight="47.0" prefWidth="88.0" text="Label" textFill="#f3d93c">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="1328.0" endY="571.0" startX="720.0" startY="300.0" stroke="#f3d93c" strokeWidth="3.0" />
+            <Line endX="1317.0" endY="290.0" layoutX="10.0" layoutY="10.0" startX="712.0" startY="563.0" stroke="#f3d93c" strokeWidth="3.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="286.0" layoutX="718.0" layoutY="294.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="613.0" />
+            <ImageView fitHeight="1006.0" fitWidth="1494.0" layoutX="-69.0" layoutY="-53.0" opacity="0.12" pickOnBounds="true">
+               <image>
+                  <Image url="@elgif2.gif" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="82.0" layoutX="73.0" layoutY="77.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="1233.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="857.0" layoutX="34.0" layoutY="40.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="1309.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="82.0" layoutX="72.0" layoutY="196.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="633.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="575.0" layoutX="72.0" layoutY="294.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="633.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="53.0" layoutX="717.0" layoutY="595.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="589.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="206.0" layoutX="717.0" layoutY="663.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="589.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="82.0" layoutX="838.0" layoutY="196.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="410.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="187.0" layoutX="731.0" layoutY="673.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="270.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="187.0" layoutX="1016.0" layoutY="673.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="276.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="68.0" layoutX="1219.0" layoutY="84.0" stroke="#f3d93c" strokeType="INSIDE" strokeWidth="3.0" width="80.0" />
+            <Label layoutX="107.0" layoutY="217.0" prefHeight="40.0" prefWidth="541.0" text="You OWN this cards" textFill="#f3d93c">
+               <font>
+                  <Font name="System Bold Italic" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="729.0" layoutY="600.0" prefHeight="40.0" prefWidth="304.0" text="Login Cards Store" textFill="#f3d93c">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="leave_button" layoutX="1225.0" layoutY="90.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="68.0" text="Leave">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font></Button>
+            <Button fx:id="play_button" layoutX="847.0" layoutY="210.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="391.0" text="Play a match">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Button>
+            <Label fx:id="welcome_label" layoutX="94.0" layoutY="97.0" prefHeight="40.0" prefWidth="779.0">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="1.0" green="0.8784313797950745" blue="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9473684430122375" green="0.94539475440979" blue="0.9342105388641357" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="score_label" alignment="CENTER_RIGHT" layoutX="912.0" layoutY="98.0" prefHeight="40.0" prefWidth="283.0" text="0" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9529411792755127" green="0.8509804010391235" blue="0.23529411852359772" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="1.0" green="0.8784313797950745" blue="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.980555534362793" green="0.8055555820465088" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <ImageView fx:id="shop_image1" fitHeight="149.0" fitWidth="119.0" layoutX="737.0" layoutY="696.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@elgif3.gif" />
+               </image>
+            </ImageView>
+            <Pane fx:id="deck_panel" layoutX="69.0" layoutY="294.0" prefHeight="575.0" prefWidth="1274.0">
+               <children>
+                  <ImageView fitHeight="10.0" fitWidth="8.0" layoutX="648.0" pickOnBounds="true" preserveRatio="true" />
+               </children></Pane>
+            <ImageView fx:id="shop_image2" fitHeight="140.0" fitWidth="111.0" layoutX="1032.0" layoutY="696.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@elgif3.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_shop1" layoutX="872.0" layoutY="792.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="BUY" />
+            <Button fx:id="button_shop2" layoutX="1159.0" layoutY="792.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="111.0" text="BUY" />
+            <TextField fx:id="codigoCreador_label" layoutX="1069.0" layoutY="606.0" prefHeight="32.0" prefWidth="159.0" promptText="Codigo creador" />
+            <Button fx:id="codigoCreador_button" layoutX="1236.0" layoutY="605.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="58.0" text="TRY">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <ImageView fx:id="shop_close1" fitHeight="187.0" fitWidth="283.0" layoutX="724.0" layoutY="676.0" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@shopBought.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="shop_close2" fitHeight="187.0" fitWidth="283.0" layoutX="1017.0" layoutY="676.0" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@shopBought.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="shop1_outStock" fitHeight="175.0" fitWidth="262.0" layoutX="733.0" layoutY="680.0" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@outStock.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="shop2_outStock" fitHeight="175.0" fitWidth="262.0" layoutX="1020.0" layoutY="678.0" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@outStock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="panel_partidaTerminada" layoutX="276.0" layoutY="109.0" prefHeight="885.0" prefWidth="1204.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f3d93c" height="623.0" layoutX="260.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" width="493.0" />
+            <ImageView fitHeight="601.0" fitWidth="470.0" layoutX="271.0" layoutY="99.0" pickOnBounds="true">
+               <image>
+                  <Image url="@registro1.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f3d93c" layoutX="338.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADO PARTIDA" textAlignment="CENTER" wrappingWidth="352.9999999999999">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Text>
+            <Button fx:id="boton_acabar" layoutX="437.0" layoutY="570.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="159.0" text="SALIR" />
+            <Label fx:id="texto_cambiar" layoutX="349.0" layoutY="360.0" prefHeight="102.0" prefWidth="334.0" text="algo aqui" textFill="#f3d93c" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <!--Line commentaries-->
+      <Pane fx:id="start_panel" prefHeight="1006.0" prefWidth="1494.0" visible="false">
+         <children>
+            <ImageView fitHeight="999.0" fitWidth="1494.0" layoutX="-8.0" layoutY="4.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@2.gif" />
+               </image></ImageView>
+         </children>
+      </Pane>
+    
+   </children>
+</AnchorPane>
