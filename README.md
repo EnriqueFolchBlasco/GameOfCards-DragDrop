@@ -1,6 +1,7 @@
 # GameOfCards-Drag-Drop-
 Final project of 1ºDAM course (development of multiplataform apps) which uses drag and drop for the cards.
 
+This app uses a database to work, it has features such as users creation, login, load of your own deck of cards, a shop to buy cards, coins system, and a gameplay part.
 
 
 
