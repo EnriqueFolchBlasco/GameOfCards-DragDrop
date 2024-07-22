@@ -3,7 +3,7 @@ Final project of 1ºDAM course (development of multiplataform apps) which uses d
 
 This app uses a database to work, it has features such as users creation, login, load of your own deck of cards, a shop to buy cards, money/coins system, and a gameplay part.
 <br>
-DISCLAIMER: This project got more work on the fact of the cards deck, how they move, positions, etc.. than the gameplay.
+<h4>DISCLAIMER: This project got more work on the fact of the cards deck, how they move, positions, etc.. than the gameplay.</h4>
 
 
 > [!IMPORTANT]  
