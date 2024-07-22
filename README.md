@@ -2,7 +2,7 @@
 Final project of 1ºDAM course (development of multiplataform apps) which uses drag and drop for the cards with Java.
 
 This app uses a database to work, it has features such as users creation, login, load of your own deck of cards, a shop to buy cards, money/coins system, and a gameplay part.
-
+DISCLAIMER: This project got more work on the fact of the cards deck, how they move, positions, etc.. than the gameplay.
 
 
 > [!IMPORTANT]  
@@ -53,11 +53,13 @@ This app uses a database to work, it has features such as users creation, login,
 
 ![image](https://github.com/user-attachments/assets/05f5b0ee-b007-4fff-9f89-6f301c2ec0ed)
 
-<h2>Closer look at how the movement works and how you make a deck and buy a card.</h2>
+<h2>-Closer look at how the movement works and how you make a deck and buy a card.</h2>
 
 https://github.com/user-attachments/assets/db75d7cb-42e1-435c-a570-927fb01c7785
 
+<h2>-Closer look at basic gameplay mecahnics, such as stamina restrictions to drop cards in some spaces, etc...</h2>
 
+https://github.com/user-attachments/assets/0f7f7f7a-4d13-4aff-a2c0-b10a6359c6d8
 
 
 
