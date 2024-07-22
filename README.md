@@ -34,7 +34,9 @@ This app uses a database to work, it has features such as users creation, login,
 ![gameplay1](https://github.com/user-attachments/assets/1f913728-5e14-4ac1-afae-9cbeee0f148b)
 
 <h4>Some examples of what happens when you try to start a  match without the completation of your deck with less than 12 cards. plus after that, difficulty choose option.</h4>
+
 ![deckLimit](https://github.com/user-attachments/assets/7a07b867-84a9-4286-9fbc-adef6f40ea11)
+
 ![chooseDifficulty](https://github.com/user-attachments/assets/761f6ac9-59c3-44f7-ab09-b1f6a088b783)
 
 <h4>This is how gameplay looks, three zones, your deck appearing each round, etcc, [Mechanics are more explained in the QR placed in the login image.]</h4>
@@ -43,6 +45,7 @@ This app uses a database to work, it has features such as users creation, login,
 <h4>Notice when you win or lose a match.</h4>
 
 ![gameplayWin](https://github.com/user-attachments/assets/e128efa2-17b4-41e6-ac4d-4ad15d2719c8)
+
 ![gameplayLose](https://github.com/user-attachments/assets/20f7f22b-f565-4a14-a423-b2dc58223fab)
 
 <h4>Once you buy all the cards in the shop, shop won't open till new cards release in future updates of the game.</h4>
