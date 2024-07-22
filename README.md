@@ -40,6 +40,7 @@ This app uses a database to work, it has features such as users creation, login,
 ![chooseDifficulty](https://github.com/user-attachments/assets/761f6ac9-59c3-44f7-ab09-b1f6a088b783)
 
 <h4>This is how gameplay looks, three zones, your deck appearing each round, etcc, [Mechanics are more explained in the QR placed in the login image.]</h4>
+
 ![gameplay3](https://github.com/user-attachments/assets/5fb6594e-b5ac-47e0-b940-a5b534e051bf)
 
 <h4>Notice when you win or lose a match.</h4>
@@ -51,5 +52,15 @@ This app uses a database to work, it has features such as users creation, login,
 <h4>Once you buy all the cards in the shop, shop won't open till new cards release in future updates of the game.</h4>
 
 ![image](https://github.com/user-attachments/assets/05f5b0ee-b007-4fff-9f89-6f301c2ec0ed)
+
+<h2>Closer look at how the movement works and how you make a deck and buy a card.</h2>
+
+https://github.com/user-attachments/assets/db75d7cb-42e1-435c-a570-927fb01c7785
+
+
+
+
+
+
 
 
