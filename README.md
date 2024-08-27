@@ -1,7 +1,16 @@
 # GameOfCards-Drag&Drop
 Final project of 1ºDAM course (development of multiplatform apps) which uses drag and drop for the cards with Java.
 
-This app uses a database to work, it has features such as user creation, login, load of your own deck of cards, a shop to buy cards, money/coin system, and a gameplay part.
+This app contains;
+- Database connections (SQL).
+- User creation.
+- Login system.
+- User personal deck of cards.
+- Cards shop.
+- Coin system.
+- Gameplay.
+
+
 <br>
 <h4>DISCLAIMER: This project got more work on the part of the cards deck, how they move, positions, etc.. than the gameplay.</h4>
 
