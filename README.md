@@ -21,7 +21,7 @@ This app uses a database to work, it has features such as users creation, login,
 
 ![loginCreation2](https://github.com/user-attachments/assets/118bf4a3-287c-4288-991b-0fc14d5bac80)
 
-<h4>Test of how you would create a account into the system.</h4>
+<h4>Test of how you would create an account into the system.</h4>
 
 ![login3](https://github.com/user-attachments/assets/c9bdca40-ad78-407f-9749-89acd4128a77)
 
